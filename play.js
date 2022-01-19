@@ -1,23 +1,7 @@
 const net = require("net");
-
+const {connect} = require('./client')
 // establishes a connection with the game server
-const connect = function () {
-  const conn = net.createConnection({
-    host: '165.227.47.243',// IP address here,
-    //localhost because im connecting to myself
-    port: 50541// PORT number here,
-    //matching the port of the snek-multiplayer server
-  });
 
-  conn.on("data", (data) => {
-    console.log('Server says: ', data);
-  })
-
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
-
-  return conn;
-};
 
 
 
