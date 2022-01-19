@@ -1,10 +1,12 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
 
 const connect = function() {
+
   const conn = net.createConnection({
-    host: "165.227.47.243", // IP address here,
+    host: IP, // IP address here,
     //localhost because im connecting to myself
-    port: 50541, // PORT number here,
+    port: PORT, // PORT number here,
     //matching the port of the snek-multiplayer server
   });
 
