@@ -1,6 +1,6 @@
 const net = require("net");
 
-const connect = function () {
+const connect = function() {
   const conn = net.createConnection({
     host: "165.227.47.243", // IP address here,
     //localhost because im connecting to myself
@@ -14,9 +14,9 @@ const connect = function () {
   conn.on("connect", () => {
     conn.write("Name: CAH");
   });
-//  setInterval( () => {
-//     conn.write("Move: up");
-//   }, 1000);
+  //  setInterval( () => {
+  //     conn.write("Move: up");
+  //   }, 1000);
   
   conn.on("data", (data) => {
     console.log("Server says: ", data);
